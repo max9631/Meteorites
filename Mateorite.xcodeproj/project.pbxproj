@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B0037246262B819D00011205 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0037245262B819D00011205 /* MainViewController.swift */; };
+		B0243E73262B2ABE003C8ABB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0243E72262B2ABE003C8ABB /* MapViewController.swift */; };
+		B0243E7C262B2CBB003C8ABB /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0243E7B262B2CBB003C8ABB /* URL+Extensions.swift */; };
+		B0243E82262B2DD0003C8ABB /* Meteorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0243E81262B2DD0003C8ABB /* Meteorite.swift */; };
+		B0243E87262B2E89003C8ABB /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0243E86262B2E89003C8ABB /* AppError.swift */; };
+		B0243E8D262B38AC003C8ABB /* MeteoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0243E8B262B38AC003C8ABB /* MeteoriteTableViewCell.swift */; };
+		B0243E8E262B38AC003C8ABB /* MeteoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0243E8C262B38AC003C8ABB /* MeteoriteTableViewCell.xib */; };
+		B02EB750262B1C3000C06948 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EB74F262B1C3000C06948 /* AppDelegate.swift */; };
+		B02EB752262B1C3000C06948 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EB751262B1C3000C06948 /* SceneDelegate.swift */; };
+		B02EB757262B1C3000C06948 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B02EB755262B1C3000C06948 /* Main.storyboard */; };
+		B02EB759262B1C3100C06948 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B02EB758262B1C3100C06948 /* Assets.xcassets */; };
+		B02EB75C262B1C3100C06948 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B02EB75A262B1C3100C06948 /* LaunchScreen.storyboard */; };
+		B02EB766262B1CCD00C06948 /* MeteoriteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EB765262B1CCD00C06948 /* MeteoriteListViewController.swift */; };
+		B02EB76D262B1CFD00C06948 /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = B02EB76C262B1CFD00C06948 /* BottomSheet */; };
+		B02EB771262B1D2D00C06948 /* DynamicContent in Frameworks */ = {isa = PBXBuildFile; productRef = B02EB770262B1D2D00C06948 /* DynamicContent */; };
+		B0839C7D262CDB52005355C8 /* MeteoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0839C7B262CDB52005355C8 /* MeteoriteViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B0037245262B819D00011205 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B0243E72262B2ABE003C8ABB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		B0243E7B262B2CBB003C8ABB /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
+		B0243E81262B2DD0003C8ABB /* Meteorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meteorite.swift; sourceTree = "<group>"; };
+		B0243E86262B2E89003C8ABB /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		B0243E8B262B38AC003C8ABB /* MeteoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoriteTableViewCell.swift; sourceTree = "<group>"; };
+		B0243E8C262B38AC003C8ABB /* MeteoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeteoriteTableViewCell.xib; sourceTree = "<group>"; };
+		B02EB74C262B1C3000C06948 /* Mateorite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mateorite.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B02EB74F262B1C3000C06948 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B02EB751262B1C3000C06948 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B02EB756262B1C3000C06948 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B02EB758262B1C3100C06948 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B02EB75B262B1C3100C06948 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B02EB75D262B1C3100C06948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B02EB765262B1CCD00C06948 /* MeteoriteListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeteoriteListViewController.swift; sourceTree = "<group>"; };
+		B062D794262B21B300CA63D3 /* DynamicContent */ = {isa = PBXFileReference; lastKnownFileType = folder; name = DynamicContent; path = ../DynamicContent; sourceTree = "<group>"; };
+		B062D796262B21B900CA63D3 /* BottomSheet */ = {isa = PBXFileReference; lastKnownFileType = folder; name = BottomSheet; path = ../BottomSheet; sourceTree = "<group>"; };
+		B0839C7B262CDB52005355C8 /* MeteoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoriteViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B02EB749262B1C3000C06948 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B02EB771262B1D2D00C06948 /* DynamicContent in Frameworks */,
+				B02EB76D262B1CFD00C06948 /* BottomSheet in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B0243E65262B2A1F003C8ABB /* Meteorite list */ = {
+			isa = PBXGroup;
+			children = (
+				B02EB765262B1CCD00C06948 /* MeteoriteListViewController.swift */,
+				B0243E8A262B388E003C8ABB /* Meteorite cell */,
+			);
+			path = "Meteorite list";
+			sourceTree = "<group>";
+		};
+		B0243E67262B2A31003C8ABB /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				B0037245262B819D00011205 /* MainViewController.swift */,
+				B0243E69262B2A3A003C8ABB /* Map */,
+				B0243E65262B2A1F003C8ABB /* Meteorite list */,
+				B0243E6A262B2A4B003C8ABB /* Meteorite */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		B0243E69262B2A3A003C8ABB /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				B0243E72262B2ABE003C8ABB /* MapViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		B0243E6A262B2A4B003C8ABB /* Meteorite */ = {
+			isa = PBXGroup;
+			children = (
+				B0839C7B262CDB52005355C8 /* MeteoriteViewController.swift */,
+			);
+			path = Meteorite;
+			sourceTree = "<group>";
+		};
+		B0243E79262B2C9A003C8ABB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B0243E7A262B2CA3003C8ABB /* Extensions */,
+				B0243E86262B2E89003C8ABB /* AppError.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B0243E7A262B2CA3003C8ABB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B0243E7B262B2CBB003C8ABB /* URL+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B0243E80262B2DCA003C8ABB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B0243E81262B2DD0003C8ABB /* Meteorite.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B0243E8A262B388E003C8ABB /* Meteorite cell */ = {
+			isa = PBXGroup;
+			children = (
+				B0243E8B262B38AC003C8ABB /* MeteoriteTableViewCell.swift */,
+				B0243E8C262B38AC003C8ABB /* MeteoriteTableViewCell.xib */,
+			);
+			path = "Meteorite cell";
+			sourceTree = "<group>";
+		};
+		B02EB743262B1C3000C06948 = {
+			isa = PBXGroup;
+			children = (
+				B02EB74E262B1C3000C06948 /* Mateorite */,
+				B02EB74D262B1C3000C06948 /* Products */,
+				B062D794262B21B300CA63D3 /* DynamicContent */,
+				B062D796262B21B900CA63D3 /* BottomSheet */,
+			);
+			sourceTree = "<group>";
+		};
+		B02EB74D262B1C3000C06948 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B02EB74C262B1C3000C06948 /* Mateorite.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B02EB74E262B1C3000C06948 /* Mateorite */ = {
+			isa = PBXGroup;
+			children = (
+				B02EB74F262B1C3000C06948 /* AppDelegate.swift */,
+				B02EB751262B1C3000C06948 /* SceneDelegate.swift */,
+				B0243E80262B2DCA003C8ABB /* Model */,
+				B0243E79262B2C9A003C8ABB /* Common */,
+				B0243E67262B2A31003C8ABB /* Scenes */,
+				B02EB755262B1C3000C06948 /* Main.storyboard */,
+				B02EB758262B1C3100C06948 /* Assets.xcassets */,
+				B02EB75A262B1C3100C06948 /* LaunchScreen.storyboard */,
+				B02EB75D262B1C3100C06948 /* Info.plist */,
+			);
+			path = Mateorite;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B02EB74B262B1C3000C06948 /* Mateorite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B02EB760262B1C3100C06948 /* Build configuration list for PBXNativeTarget "Mateorite" */;
+			buildPhases = (
+				B02EB748262B1C3000C06948 /* Sources */,
+				B02EB749262B1C3000C06948 /* Frameworks */,
+				B02EB74A262B1C3000C06948 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mateorite;
+			packageProductDependencies = (
+				B02EB76C262B1CFD00C06948 /* BottomSheet */,
+				B02EB770262B1D2D00C06948 /* DynamicContent */,
+			);
+			productName = Mateorite;
+			productReference = B02EB74C262B1C3000C06948 /* Mateorite.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B02EB744262B1C3000C06948 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					B02EB74B262B1C3000C06948 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = B02EB747262B1C3000C06948 /* Build configuration list for PBXProject "Mateorite" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B02EB743262B1C3000C06948;
+			packageReferences = (
+				B02EB76B262B1CFD00C06948 /* XCRemoteSwiftPackageReference "BottomSheet" */,
+				B02EB76F262B1D2D00C06948 /* XCRemoteSwiftPackageReference "DynamicContent" */,
+			);
+			productRefGroup = B02EB74D262B1C3000C06948 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B02EB74B262B1C3000C06948 /* Mateorite */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B02EB74A262B1C3000C06948 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0243E8E262B38AC003C8ABB /* MeteoriteTableViewCell.xib in Resources */,
+				B02EB75C262B1C3100C06948 /* LaunchScreen.storyboard in Resources */,
+				B02EB759262B1C3100C06948 /* Assets.xcassets in Resources */,
+				B02EB757262B1C3000C06948 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B02EB748262B1C3000C06948 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0243E8D262B38AC003C8ABB /* MeteoriteTableViewCell.swift in Sources */,
+				B0037246262B819D00011205 /* MainViewController.swift in Sources */,
+				B02EB766262B1CCD00C06948 /* MeteoriteListViewController.swift in Sources */,
+				B02EB750262B1C3000C06948 /* AppDelegate.swift in Sources */,
+				B02EB752262B1C3000C06948 /* SceneDelegate.swift in Sources */,
+				B0243E7C262B2CBB003C8ABB /* URL+Extensions.swift in Sources */,
+				B0243E73262B2ABE003C8ABB /* MapViewController.swift in Sources */,
+				B0839C7D262CDB52005355C8 /* MeteoriteViewController.swift in Sources */,
+				B0243E87262B2E89003C8ABB /* AppError.swift in Sources */,
+				B0243E82262B2DD0003C8ABB /* Meteorite.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B02EB755262B1C3000C06948 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B02EB756262B1C3000C06948 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B02EB75A262B1C3100C06948 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B02EB75B262B1C3100C06948 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B02EB75E262B1C3100C06948 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B02EB75F262B1C3100C06948 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B02EB761262B1C3100C06948 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SY648HEY8K;
+				INFOPLIST_FILE = Mateorite/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cz.salih.Mateorite;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B02EB762262B1C3100C06948 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SY648HEY8K;
+				INFOPLIST_FILE = Mateorite/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cz.salih.Mateorite;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B02EB747262B1C3000C06948 /* Build configuration list for PBXProject "Mateorite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B02EB75E262B1C3100C06948 /* Debug */,
+				B02EB75F262B1C3100C06948 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B02EB760262B1C3100C06948 /* Build configuration list for PBXNativeTarget "Mateorite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B02EB761262B1C3100C06948 /* Debug */,
+				B02EB762262B1C3100C06948 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B02EB76B262B1CFD00C06948 /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:max9631/BottomSheet.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		B02EB76F262B1D2D00C06948 /* XCRemoteSwiftPackageReference "DynamicContent" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:max9631/DynamicContent.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B02EB76C262B1CFD00C06948 /* BottomSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B02EB76B262B1CFD00C06948 /* XCRemoteSwiftPackageReference "BottomSheet" */;
+			productName = BottomSheet;
+		};
+		B02EB770262B1D2D00C06948 /* DynamicContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B02EB76F262B1D2D00C06948 /* XCRemoteSwiftPackageReference "DynamicContent" */;
+			productName = DynamicContent;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = B02EB744262B1C3000C06948 /* Project object */;
+}
