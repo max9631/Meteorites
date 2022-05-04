@@ -23,10 +23,14 @@
 		B02EB76D262B1CFD00C06948 /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = B02EB76C262B1CFD00C06948 /* BottomSheet */; };
 		B02EB771262B1D2D00C06948 /* DynamicContent in Frameworks */ = {isa = PBXBuildFile; productRef = B02EB770262B1D2D00C06948 /* DynamicContent */; };
 		B0839C7D262CDB52005355C8 /* MeteoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0839C7B262CDB52005355C8 /* MeteoriteViewController.swift */; };
+		B0AE878F27C27A400027A25F /* InheritableEnum in Frameworks */ = {isa = PBXBuildFile; productRef = B0AE878E27C27A400027A25F /* InheritableEnum */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B0037245262B819D00011205 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B020490F278791B600E93024 /* DynamicContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DynamicContent; sourceTree = "<group>"; };
+		B0204910278791BA00E93024 /* BottomSheet */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = BottomSheet; sourceTree = "<group>"; };
+		B02049112787933D00E93024 /* InheritableEnum */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = InheritableEnum; path = ../InheritableEnum; sourceTree = "<group>"; };
 		B0243E72262B2ABE003C8ABB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B0243E7B262B2CBB003C8ABB /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		B0243E81262B2DD0003C8ABB /* Meteorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meteorite.swift; sourceTree = "<group>"; };
@@ -41,8 +45,7 @@
 		B02EB75B262B1C3100C06948 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B02EB75D262B1C3100C06948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B02EB765262B1CCD00C06948 /* MeteoriteListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeteoriteListViewController.swift; sourceTree = "<group>"; };
-		B062D794262B21B300CA63D3 /* DynamicContent */ = {isa = PBXFileReference; lastKnownFileType = folder; name = DynamicContent; path = ../DynamicContent; sourceTree = "<group>"; };
-		B062D796262B21B900CA63D3 /* BottomSheet */ = {isa = PBXFileReference; lastKnownFileType = folder; name = BottomSheet; path = ../BottomSheet; sourceTree = "<group>"; };
+		B05BF8B32787908400888F8D /* InheritableEnum */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = InheritableEnum; path = ../InheritableEnum; sourceTree = "<group>"; };
 		B0839C7B262CDB52005355C8 /* MeteoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoriteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,6 +56,7 @@
 			files = (
 				B02EB771262B1D2D00C06948 /* DynamicContent in Frameworks */,
 				B02EB76D262B1CFD00C06948 /* BottomSheet in Frameworks */,
+				B0AE878F27C27A400027A25F /* InheritableEnum in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,8 +138,8 @@
 			children = (
 				B02EB74E262B1C3000C06948 /* Mateorite */,
 				B02EB74D262B1C3000C06948 /* Products */,
-				B062D794262B21B300CA63D3 /* DynamicContent */,
-				B062D796262B21B900CA63D3 /* BottomSheet */,
+				B05BF8B12787907800888F8D /* Packages */,
+				B0AE878D27C27A400027A25F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,6 +167,24 @@
 			path = Mateorite;
 			sourceTree = "<group>";
 		};
+		B05BF8B12787907800888F8D /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				B05BF8B32787908400888F8D /* InheritableEnum */,
+				B0204910278791BA00E93024 /* BottomSheet */,
+				B020490F278791B600E93024 /* DynamicContent */,
+				B02049112787933D00E93024 /* InheritableEnum */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		B0AE878D27C27A400027A25F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,6 +204,7 @@
 			packageProductDependencies = (
 				B02EB76C262B1CFD00C06948 /* BottomSheet */,
 				B02EB770262B1D2D00C06948 /* DynamicContent */,
+				B0AE878E27C27A400027A25F /* InheritableEnum */,
 			);
 			productName = Mateorite;
 			productReference = B02EB74C262B1C3000C06948 /* Mateorite.app */;
@@ -405,7 +428,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cz.salih.Mateorite;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.salih.Mateorite.df;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -424,7 +447,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cz.salih.Mateorite;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.salih.Mateorite.df;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -483,6 +506,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B02EB76F262B1D2D00C06948 /* XCRemoteSwiftPackageReference "DynamicContent" */;
 			productName = DynamicContent;
+		};
+		B0AE878E27C27A400027A25F /* InheritableEnum */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = InheritableEnum;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

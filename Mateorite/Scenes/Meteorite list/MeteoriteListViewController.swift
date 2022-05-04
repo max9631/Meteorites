@@ -10,6 +10,19 @@ import BottomSheet
 import Combine
 import DynamicContent
 
+enum MeteoriteListAnchor: BottomSheetAnchor {
+    case shown, min, mid
+
+    var rawValue: BottomSheetOffset {
+        switch self {
+        case .shown: return .relative(percentage: 1)
+        case .min: return .specific(offset: 100)
+        case .mid: return .relative(percentage: 0.5)
+        }
+    }
+
+}
+
 class MeteoriteListViewController: UIViewController {
     var meteorites: CurrentValueSubject<[Meteorite], Never> = CurrentValueSubject([])
     var contentState: CurrentValueSubject<DynamicContentDefaultState, Never> = CurrentValueSubject(.loading)
@@ -25,7 +38,7 @@ class MeteoriteListViewController: UIViewController {
         dynamicTableView = DynamicTableView(embedIn: dynamicTableViewContainer, initialState: .loading, configuration: { [weak self] tablewView in
             tablewView.delegate = self
             tablewView.dataSource = self
-                let nib = UINib(nibName: "MeteoriteTableViewCell", bundle: nil)
+            let nib = UINib(nibName: "MeteoriteTableViewCell", bundle: nil)
             tablewView.register(nib, forCellReuseIdentifier: "MeteoriteTableViewCell")
         })
         guard let main = bottomSheetController as? MainViewController else {
@@ -49,15 +62,12 @@ class MeteoriteListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        hook?.anchor(to: .med, animated:  true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        print("list did appear")
-        hook?.anchor(to: .med, animated:  didAppearAtLeastOnce)
+        hook?.to.value = .shown
         didAppearAtLeastOnce = true
-        
     }
     
     func show(meteorite: Meteorite) {
@@ -66,9 +76,9 @@ class MeteoriteListViewController: UIViewController {
         }
         viewController.setup(with: meteorite)
         if bottomSheetController?.visibleContextViewController is MeteoriteViewController {
-            bottomSheetController?.repalceContext(with: viewController, at: MeteoriteAnchor.shown.offset, animated: true)
+            bottomSheetController?.repalceContext(with: viewController, at: MeteoriteAnchor.shown.rawValue, animated: true)
         } else {
-            bottomSheetController?.pushContext(viewController: viewController, at: MeteoriteAnchor.shown.offset, animated: true)
+            bottomSheetController?.pushContext(viewController: viewController, at: MeteoriteAnchor.shown.rawValue, animated: true)
         }
     }
 }
@@ -94,6 +104,6 @@ extension MeteoriteListViewController: UITableViewDelegate, UITableViewDataSourc
     }
 }
 
-extension MeteoriteListViewController: BottomSheetDelegate {
-    
+extension MeteoriteListViewController: BottomSheetAnchorDelegate {
+    typealias AnchorType = MeteoriteListAnchor
 }

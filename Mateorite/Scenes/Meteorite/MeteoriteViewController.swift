@@ -7,13 +7,16 @@
 
 import UIKit
 import BottomSheet
+import InheritableEnum
 
 enum MeteoriteAnchor: BottomSheetAnchor {
+    typealias Inherites = BottomSheetAnchorHidable
+
     case shown, min
     
-    var offset: BottomSheetOffset {
+    var rawValue: BottomSheetOffset {
         switch self {
-        case .shown: return .specific(offset: 450)
+        case .shown: return .specific(offset: 350)
         case .min: return .specific(offset: 100)
         }
     }
@@ -46,7 +49,7 @@ class MeteoriteViewController: UIViewController, BottomSheetAnchorDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        hook?.anchor(to: .shown)
+        hook?.to.value = .shown
     }
     
     func setup(with meteorite: Meteorite) {
@@ -56,7 +59,7 @@ class MeteoriteViewController: UIViewController, BottomSheetAnchorDelegate {
     @IBAction
     func pop() {
         if let meteorite = meteorite,
-           let main = bottomSheetController as? MainViewController{
+           let main = bottomSheetController as? MainViewController {
             main.mapController?.deselect(meteorite: meteorite)
         }
         bottomSheetController?.popContext()
