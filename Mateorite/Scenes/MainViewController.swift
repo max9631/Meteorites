@@ -19,18 +19,15 @@ class MainViewModel {
     var meteorites: CurrentValueSubject<[Meteorite], Never> = CurrentValueSubject([])
     var meteoritesState: CurrentValueSubject<DynamicContentDefaultState, Never> = CurrentValueSubject(.loading)
     
-    init() {
-        meteorites
-            .map { videos -> DynamicContentDefaultState in videos.isEmpty ? .empty(message: "") : .content }
-            .subscribe(meteoritesState)
-            .store(in: &cancellables)
-    }
+    init() {}
     
     func loadMeteorites() {
+        meteoritesState.send(.loading)
         var request = URLRequest(url: URL(string: "https://data.nasa.gov/resource/y77d-th95.json")!)
         request.httpMethod = "GET"
         request.addValue(self.token, forHTTPHeaderField: "X-App-Token")
-        URLSession.shared
+        request.cachePolicy = .reloadIgnoringCacheData
+        let meteorites: AnyPublisher<[Meteorite], Never> = URLSession.shared
             .dataTaskPublisher(for: request)
             .tryMap { (data, response) -> Data in
                 guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
@@ -38,11 +35,23 @@ class MainViewModel {
                 }
                 return data
             }
-            .decode(type: [Meteorite].self, decoder: decoder)
-            .map { $0.filter { $0.geolocation != nil } }
-            .replaceError(with: [])
+            .decode(type: [Meteorite]?.self, decoder: decoder)
+            .map { $0?.filter { $0.geolocation != nil } }
+            .catch { [weak self] error -> Just<[Meteorite]?> in
+                self?.meteoritesState.send(.error(message: "An error occured, try again", action: { [weak self] in
+                    self?.loadMeteorites()
+                }))
+                return Just(nil)
+            }
+            .compactMap { $0 }
+            .eraseToAnyPublisher()
+
+        meteorites
             .filter { !$0.isEmpty }
-            .sink(receiveValue: { [weak self] meteorites in self?.meteorites.value = meteorites })
+            .sink(receiveValue: { [weak self] meteorites in
+                self?.meteorites.value = meteorites
+                self?.meteoritesState.send(.content)
+            })
             .store(in: &cancellables)
     }
 }

@@ -15,7 +15,7 @@ enum MeteoriteListAnchor: BottomSheetAnchor {
 
     var rawValue: BottomSheetOffset {
         switch self {
-        case .shown: return .relative(percentage: 1)
+        case .shown: return .relative(percentage: 0.9)
         case .min: return .specific(offset: 100)
         case .mid: return .relative(percentage: 0.5)
         }
